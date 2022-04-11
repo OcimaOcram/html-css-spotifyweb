@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 body {
-    color: white;
+    color: rgba(255, 255, 255, 0.651);
+    font-family: ‘Montserrat’, sans-serif;
 }
 /* Struttura */
 header {
@@ -54,9 +55,47 @@ header button {
     height: 20px;
     display: inline;
 }
-.side-bar ul li {
+.side-nav {
     margin-right: 50%;
 }
 h4 {
     padding-top: 15px;
+}
+#aggiungi-button {
+    font-size: 35px;
+    padding: 3px;
+}
+.side-bar span {
+    position: relative;
+    bottom: 7px;
+}
+#nomi-playlist {
+    overflow-y: scroll;
+    font-size: 12px;
+}
+.padding-5 {
+    padding: 5px;
+}
+.side-bar div img {
+    height: 15px;
+    width: 15px;
+}
+.profile {
+    position: absolute;
+    bottom: 103px;
+}
+/* main */
+nav {
+    width: 50%;
+    margin: auto;
+}
+#nav {
+    list-style-type: none;
+}
+#nav li {
+    display: inline;
+    padding: 5px;
+}
+h2 {
+    color: white;
 }
