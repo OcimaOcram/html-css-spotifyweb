@@ -5,7 +5,7 @@
 }
 body {
     color: rgba(255, 255, 255, 0.651);
-    font-family: "Montserrat", sans-serif;
+    font-family: sans-serif;
 }
 /* Struttura */
 header {
@@ -24,14 +24,8 @@ main {
     width: calc(100% - 150px);;
     float: right;
     height: calc(100vh - 200px);
-    background-color: rgb(34, 34, 68);
+    background-color: rgb(70, 42, 102);
     overflow-y: auto;
-}
-footer {
-    width: 100%;
-    height: 100px;
-    background-color: gray;
-    float: left;
 }
 /* header */
 header {
@@ -84,7 +78,7 @@ h4 {
     position: absolute;
     bottom: 103px;
 }
-/* main */
+/* MAIN */
 nav {
     width: 50%;
     margin: auto;
@@ -104,6 +98,7 @@ h3 {
 }
 .container1 {
     display: flex;
+    flex-wrap: wrap;
 }
 .music {
     margin: 15px;
@@ -112,23 +107,176 @@ h3 {
     min-width: 1px;
     display: flex;
     flex-direction: column;  
+    position: relative;
+    z-index: 2;
 }
 .circle {
     border-radius: 100%;
 }
 /* Inizio footer */
-footer {
+footer{
+    width: 100%;
+    height: 95px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #282828;
 }
 
+footer ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
 
+footer li{
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+footer a{
+    color: #757575;
+}
+
+.left_comm .fa-regular, .middle_comm .fa-solid{
+    font-size: 20px;
+}
+
+/* Bars */
+footer .bar{
+    height: 5px;
+    background: #5a5a5a;
+    border-radius: 25px;
+}
+
+footer .bar .counter{
+    height: 5px;
+    background: #c1c1c1;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+}
+
+footer .bar .counter .round{
+    background: white;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    display: none;
+}
+
+/* Left commands */
+footer .playing{
+    height: 50px;
+    padding-left: 5px;
+}
+
+footer .playing_specs{
+    padding: 0 15px;
+}
+
+footer .playing_specs a{
+    font-size: 12px;
+}
+
+/* Middle commands */
+.middle_comm .up_player, .middle_comm .down_player{
+    display: flex;
+    justify-content: center;
+}
+
+footer .middle_comm .up_player{
+    padding-bottom: 10px;
+}
+
+footer .progress_bar{
+    width: 450px;
+}
+
+footer .bar .video_counter{
+    width: 90px;
+}
+
+footer .bar .video_counter .round{
+    margin-left: 78px;
+}
+
+footer .middle_comm .fa-circle-play{
+    font-size: 35px;
+    margin: 1px 5px;
+}
+
+.middle_comm .fa-regular, .middle_comm .fa-solid{
+    color: white;
+}
+
+footer .middle_comm li{
+    padding: 0 5px;
+}
+
+/* Right commands */
+footer .right_comm a{
+    color: white;
+}
+
+footer .sound_bar{
+    width: 120px;
+}
+
+footer .bar .sound_counter{
+    width: 30px;
+}
+
+footer .bar .sound_counter .round{
+    margin-left: 18px;
+}
 
 /* Hover */
+footer .left_comm a:hover{
+    color: white;
+}
+
+footer .bar:hover .counter{
+    background: yellow;
+}
+
+footer .bar:hover .counter .round{
+    display: block;
+}
+
+footer .middle_comm .fa-circle-play:hover{
+    font-size: 37px;
+    margin: 0 4px;
+}
+
+/* bottone header */
+#button-hover:hover {
+    padding: 20px 25px;
+    text-align: center;
+}
+
+/* musiche */
 .scurimento {
     background-color: rgba(0, 0, 0, 0.555);
     position: absolute;
     max-width: 150px;
-    /* min-width: 1px; */
+    min-width: 150px;
     max-height: 150px;
     min-height: 150px;
+    display: flex;
+    flex-direction: column; 
+    z-index: 0;
+}
+.scurimento i {
+    position: absolute;
+    bottom: 45%;
+    left: 45%;
+    font-size: x-large;
+}
+.music:hover {
+    z-index: 0;
+}
+.scurimento:hover {
+    z-index: 3;
 }
