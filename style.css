@@ -5,42 +5,50 @@
 }
 body {
     color: rgba(255, 255, 255, 0.651);
-    font-family: sans-serif;
+    font-family:"Montserrat", sans-serif;
 }
 /* Struttura */
 header {
-    width: calc(100% - 150px);
+    width: calc(100% - 180px);
     float: right;
     height: 100px;
     background-color: rgb(16, 16, 29);
 }
 .side-bar {
-    width: 150px;
+    width: 180px;
     float: left;
     height: calc(100vh - 100px);
     background-color: black;
 }
 main {
-    width: calc(100% - 150px);;
+    width: calc(100% - 180px);;
     float: right;
     height: calc(100vh - 200px);
-    background-color: rgb(70, 42, 102);
+    background-color: rgb(34, 26, 43);
     overflow-y: auto;
 }
 /* header */
 header {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
-header button {
+header a {
     margin: 30px;
     padding: 5px 10px;
-    border-radius: 15px;
-    background-color: rgb(16, 16, 29);
+    border-radius: 25px;
+    border: 1px solid white;
     color: white;
-    border-color: white;
 }
 /* Side bar */
+.side-bar {
+    overflow: hidden;
+
+
+}
+.side-bar * {
+    margin: 2px;
+}
 #logo {
     height: 30px;
     margin: 15px 10px;
@@ -64,6 +72,7 @@ h4 {
     bottom: 7px;
 }
 #nomi-playlist {
+    height: 30vh;
     overflow-y: scroll;
     font-size: 12px;
 }
@@ -85,6 +94,9 @@ nav {
 }
 #nav {
     list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 #nav li {
     display: inline;
@@ -105,6 +117,7 @@ h3 {
     text-align: center;
     max-width: 150px; 
     min-width: 1px;
+    /* width: 15%; */
     display: flex;
     flex-direction: column;  
     position: relative;
@@ -121,6 +134,7 @@ footer{
     align-items: center;
     justify-content: space-between;
     background-color: #282828;
+    z-index: 1;
 }
 
 footer ul{
@@ -252,8 +266,9 @@ footer .middle_comm .fa-circle-play:hover{
 
 /* bottone header */
 #button-hover:hover {
-    padding: 20px 25px;
+    padding: 10px 15px;
     text-align: center;
+    border-radius: 25px;
 }
 
 /* musiche */
@@ -261,6 +276,7 @@ footer .middle_comm .fa-circle-play:hover{
     position: absolute;
     max-width: 150px;
     min-width: 150px;
+    /* width: 15%; */
     max-height: 150px;
     min-height: 150px;
     display: flex;
@@ -277,4 +293,24 @@ footer .middle_comm .fa-circle-play:hover{
 .scurimento:hover {
     background-color: rgba(0, 0, 0, 0.555);
     color: white;
+}
+
+
+
+/* Mediaqueary */
+
+@media screen and (max-width: 560px) {
+    .side-bar {
+        width: 50px;
+    }
+    header, main, footer {
+        width: calc(100% - 50px);
+    
+    }
+
+    #logo {display:none}
+    .side-bar ul li span, h4, #aggiungi-button, .side-bar span, #nomi-playlist, .profile span {
+        display: none;
+    }
+    
 }
